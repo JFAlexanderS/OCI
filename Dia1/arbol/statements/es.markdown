@@ -14,6 +14,7 @@ Asi se ve un árbol binario perfecto:
 
 Y todo esto viene a la forma de representar árboles binarios en Karel. Ahora, normalmente un árbol binario en Karel se vería asi:
 <center>![Arbol binario Karel paredes](karel_binary.png)</center>
+
 Un nodo se representa como un bloque de casillas delimitado por paredes, sus hijos son los dos bloques directamente debajo de él, y su padre es el bloque directamente arriba de él. El problema es que es imposible moverse en un arbol así, entonces para cada nodo que no sea una hoja, Karel derrumbó las paredes horizontales en los extremos de la derecha y de la izquierda. Ahora, el árbol binaro se ve así:
 <center>![Arbol binario Karel paredes legit](karel_binary_legit.png)</center>
 
