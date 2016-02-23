@@ -45,7 +45,7 @@ Escribe un programa que deje a Karel en la última casilla a la que puede llegar
 
 ### Entrada
 
-**740 zumbadores en la mochila de Karel**
+**745 zumbadores en la mochila de Karel**
 
 <center>![Ejemplo de entrada](input_ejemplo.png)</center>
 

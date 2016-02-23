@@ -58,16 +58,14 @@ class program
         move();
         if(facingNorth)
             put(n);
-        if(facingSouth)
-            pick(n);
     }
         
     void clonePrep(n)
     {
-        if(facingNorth)
+        if(facingSouth)
             pick(n);
         cloneForward(n);
-        if(facingNorth)
+        if(facingSouth)
             put(n);
     }
 
