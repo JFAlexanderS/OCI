@@ -26,7 +26,7 @@ Encuentra la cantidad de tiempo que Karel va a pasar haciendo la lavandería y d
 
 * **Subtarea 1 [30 puntos]:** Karel nunca lava más de una prenda.
 
-* **Subtarea 2 [70 puntos]:** La cantidad de prendas que lava Karel siempre es menor a 100.
+* **Subtarea 2 [70 puntos]:** La cantidad de prendas que lava Karel siempre es menor a 90.
 
 # Ejemplo
 
