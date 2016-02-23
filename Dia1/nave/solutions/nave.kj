@@ -1,0 +1,96 @@
+class program
+{
+
+    void turn(n)
+    {
+        iterate(n)
+            turnleft();
+    }
+
+    void put(n)
+    {
+        iterate(n)
+            putbeeper();
+    }
+    
+    void pick(n)
+    {
+        iterate(n)
+            pickbeeper();
+    }
+
+    void getGravity(n)
+    {
+        if(nextToABeeper)
+        {
+            pickbeeper();
+            getGravity(succ(n));
+        }
+        else
+        {
+            turn(2);
+            move();
+            move();
+            turn(1);
+            put(n);
+            travel(n);
+        }
+    }
+
+    void cloneForward(n)
+    {
+        if(nextToABeeper)
+        {
+            pick(n);
+            cloneForward(n);
+            put(n);
+            move();
+            put(n);
+            turn(2);
+            move();
+            turn(2);
+        }
+    }
+    
+    void fixAnomaly(n)
+    {
+        move();
+        if(facingNorth)
+            put(n);
+        if(facingSouth)
+            pick(n);
+    }
+        
+
+    void travel(n)
+    {
+        while(anyBeepersInBeeperBag)
+        {
+            if(frontIsClear && rightIsBlocked)
+            {
+                cloneForward(n);
+                fixAnomaly(n);
+            }
+            else if(rightIsBlocked)
+            {
+                turn(1);
+                cloneForward(n);
+                fixAnomaly(n);
+            }
+            else
+            {
+                turn(3);
+                cloneForward(n);
+                fixAnomaly(n);
+            }
+        }
+    }
+
+    program ()
+    {
+        turn(1);
+        move();
+        move();
+        getGravity(0);
+    }
+}
