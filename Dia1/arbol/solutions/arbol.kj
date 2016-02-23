@@ -1,0 +1,94 @@
+class program
+{
+
+    void turn(n)
+    {
+        iterate(n)
+            turnleft();
+    }
+
+    void whiMove()
+    {
+        while(frontIsClear)
+            move();
+    }
+
+    void moveUp()
+    {
+        if(nextToABeeper)
+        {
+            pickbeeper();
+            moveUp();
+            putbeeper();
+        }
+        else
+        {
+            turn(2);
+            move();
+            turn(2);
+        }
+    }
+
+    void merge()
+    {
+        if(nextToABeeper)
+        {
+            pickbeeper();
+            merge();
+            putbeeper();
+        }
+        else
+        {
+            if(frontIsClear)
+            {
+                whiMove();
+                merge();
+            }
+            else
+            {
+                while(notFacingSouth)
+                    turn(1);
+            }
+        }
+    }
+
+    void getSum()
+    {
+        if(leftIsBlocked && frontIsBlocked && rightIsBlocked)
+        {
+            return();
+        }
+
+        move();
+        getSum();
+        moveUp();
+
+        if(rightIsBlocked)
+        {
+            turn(1);
+            whiMove();
+            turn(3);
+        }
+        else
+        {
+            turn(3);
+            whiMove();
+            turn(1);
+        }
+
+        move();
+        getSum();
+        moveUp();
+
+        if(rightIsBlocked)
+            turn(1);
+        else
+            turn(3);
+        merge();
+    }
+
+    program ()
+    {
+        getSum();
+    }
+}
