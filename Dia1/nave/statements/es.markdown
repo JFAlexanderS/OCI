@@ -12,7 +12,7 @@ Como extraña mucho a sus Karelitos, Karel está ansioso por regresar a casa, y 
 
 El problema es que, como mencionamos antes, las leyes de la física no funcionan igual en este mundo. La diferencia aquí es que mientras más alto vuela Karel, más combustible tiene que gastar. En particular, la fuerza de gravedad $F_g$ aumenta por $G$ en cada fila del mundo. (e.g. en la fila 1:  $F_g=G$, en la fila 2: $F_g=2G$, en la fila 3:  $F_g=3G$, y así sucesivamente). Karel gasta $F_g$ unidades de combustible para moverse de una casilla con fuerza de gravedad $F_g$. 
 
-Por ejemplo, si Karel quiere rodear la base de este mundo cuando $G=2$, usaria las siguientes cantidades de combustible en cada casilla:
+Por ejemplo, si Karel quiere rodear la base de este mundo cuando $G=2$, usaría las siguientes cantidades de combustible en cada casilla:
 <center>![Mundo G2](mundo_g2.png)</center>
 
 Y si $G=5$, sería así:
