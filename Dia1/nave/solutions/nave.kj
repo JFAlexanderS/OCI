@@ -28,6 +28,7 @@ class program
         }
         else
         {
+            put(n);
             turn(2);
             move();
             move();
@@ -61,6 +62,14 @@ class program
             pick(n);
     }
         
+    void clonePrep(n)
+    {
+        if(facingNorth)
+            pick(n);
+        cloneForward(n);
+        if(facingNorth)
+            put(n);
+    }
 
     void travel(n)
     {
@@ -68,19 +77,19 @@ class program
         {
             if(frontIsClear && rightIsBlocked)
             {
-                cloneForward(n);
+                clonePrep(n);
                 fixAnomaly(n);
             }
             else if(rightIsBlocked)
             {
                 turn(1);
-                cloneForward(n);
+                clonePrep(n);
                 fixAnomaly(n);
             }
             else
             {
                 turn(3);
-                cloneForward(n);
+                clonePrep(n);
                 fixAnomaly(n);
             }
         }
