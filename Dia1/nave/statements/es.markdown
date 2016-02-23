@@ -32,6 +32,7 @@ Escribe un programa que deje a Karel en la última casilla a la que puede llegar
 * No importa la orientación final de Karel.
 * La cantidad de $U$ de combustible en la mochila de Karel siempre será la cantidad exacta para hacer el último movimiento. En particular, nunca se dará el caso donde hay suficiente combustible para viajar "media casilla", o cualquier otra cantidad fraccional. 
 * En un programa correcto, Karel siempre termina con 0 zumbadores en su mochila. 
+* Entre cada pared vertical siempre hay una distancia mayor o igual a 2 columnas.
 
 # Subtareas
 
