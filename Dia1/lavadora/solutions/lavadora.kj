@@ -1,0 +1,162 @@
+class program
+{
+
+    void turn(n)
+    {
+        iterate(n)
+            turnleft();
+    }
+
+    void put(n)
+    {
+        iterate(n)
+            putbeeper();
+    }
+
+    void whiMove()
+    {
+        while(frontIsClear)
+            move();
+    }
+
+    void getAdd(n)
+    {
+        if(nextToABeeper)
+        {
+            pickbeeper();
+            getAdd(succ(n));
+        }
+        else
+        {
+            put(n);
+            move();
+            move();
+            while(nextToABeeper)
+                move();
+            turn(2);
+            move();
+            turn(1);
+            put(n);
+        }
+    }
+
+    void addTime()
+    {
+        while(notFacingSouth)
+            turn(1);
+        whiMove();
+        turn(2);
+        getAdd(0);
+    }
+
+    void max(n)
+    {
+        iterate(n)
+        {
+            if(nextToABeeper)
+                pickbeeper();
+        }
+        iterate(n)
+            putbeeper();
+    }
+
+    void maxTest(n)
+    {
+        if(nextToABeeper)
+        {
+            pickbeeper();
+            maxTest(succ(n));
+        }
+        else
+        {
+            put(n);
+            move();
+            max(n);
+        }
+    }
+
+    void getMax()
+    {
+        turn(2);
+        move();
+        turn(2);
+        maxTest(0);
+        turn(3);
+        move();
+        turn(2);
+        maxTest(0);
+    }
+
+    void getClothes(n)
+    {
+        if(nextToABeeper)
+        {
+            pickbeeper();
+            getClothes(succ(n));
+        }
+        else
+        {
+            turn(1);
+            move();
+            move();
+            turn(3);
+            move();
+            iterate(n)
+            {
+                iterate(3)
+                {
+                    getMax();
+                    addTime();
+                    move();
+                }
+
+                turn(2);
+                iterate(3)
+                {
+                    move();
+                }
+                turn(3);
+                move();
+                turn(3);
+            }
+        }
+    }
+    
+    void transfer(n)
+    {
+        if(nextToABeeper)
+        {
+            pickbeeper();
+            transfer(succ(n));
+        }
+        else
+        {
+            turn(1);
+            move();
+            turn(3);
+            whiMove();
+            put(pred(n));
+        }
+    }
+
+    program ()
+    {
+        move();
+        turn(1);
+        move();
+        move();
+        putbeeper();
+        turn(2);
+        move();
+        move();
+        turn(3);
+        move();
+        turn(2);
+        getClothes(0);
+        move();
+        move();
+        turn(3);
+        move();
+        transfer(0);
+    }
+}
