@@ -1,0 +1,22 @@
+<resultados>
+	<mundos>
+		<mundo nombre="mundo_0">
+			<linea fila="11" compresionDeCeros="true">(16) 66 66 </linea>
+			<linea fila="10" compresionDeCeros="true">(16) 60 60 </linea>
+			<linea fila="9" compresionDeCeros="true">(16) 54 54 </linea>
+			<linea fila="8" compresionDeCeros="true">(16) 48 48 </linea>
+			<linea fila="7" compresionDeCeros="true">(3) 42 42 42 42 </linea>
+			<linea fila="6" compresionDeCeros="true">(3) 36 36 36 36 36 36 </linea>
+			<linea fila="5" compresionDeCeros="true">(3) 30 30 30 30 30 30 30 30 </linea>
+			<linea fila="4" compresionDeCeros="true">(3) 24 24 24 24 24 24 24 24 24 24 </linea>
+			<linea fila="3" compresionDeCeros="true">(3) 18 18 18 18 18 18 18 18 18 18 18 18 </linea>
+			<linea fila="2" compresionDeCeros="true">(3) 12 12 12 12 12 12 12 12 12 12 12 12 12 12 </linea>
+			<linea fila="1" compresionDeCeros="true">(1) 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 </linea>
+		</mundo>
+	</mundos>
+	<programas>
+		<programa nombre="p1" resultadoEjecucion="FIN PROGRAMA">
+			<karel x="23" y="2"/>
+		</programa>
+	</programas>
+</resultados>
